@@ -9,9 +9,7 @@ public class NameTestNew {
         List<Person> list1 = Person.createShortList();
         System.out.println("===Custom List===");
         for(Person person:list1){
-         System.out.println(
-                 person.printCustom(p -> "Name: " +p.getGivenName() + "eMail: " + p.geteMail())
-         );
+                 person.printCustom(p -> "Name: " +p.getGivenName() + "eMail: " + p.geteMail());
         }
 
         Function<Person, String> westernStyle = p -> {
@@ -33,12 +31,12 @@ public class NameTestNew {
 
          System.out.println("\n=== Western List===");
          for (Person person: list1){
-             System.out.println(person.printCustom(westernStyle));
+             person.printCustom(westernStyle);
 
     }
          System.out.println("\n===Eastern List===");
          for (Person person: list1){
-             System.out.println(person.printCustom(easternStyle));
+             person.printCustom(easternStyle);
          }
     }
 
