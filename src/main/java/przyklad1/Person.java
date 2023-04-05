@@ -206,10 +206,24 @@ public class Person {
 
     }
 
-    //printCustom(){};
-    //PrintEasterStyle(){};
-    //PrintWesternStyle();
+    public void printCustom(Function<Person, String> style){
+        System.out.println( style.apply(this) );
+    }
 
 
 
+    public void printWesternName(){
+        System.out.println( "\nName: " + getGivenName() + " " + getSurName() + "\n" +
+                "Age: " + getAge() + " Gender: " + getGender() + "\n" +
+                "Email: " + geteMail() + "\n" +
+                "Phone: " + getPhone() + "\n" +
+                "Address: " + getAddress());
+    }
+    public void printEasterName(){
+        System.out.println( "\nName: " + getSurName() + " " + getGivenName() + "\n" +
+                "Age: " + getAge() + " Gender: " + getGender() + "\n" +
+                "Email: " + geteMail()+ "\n" +
+                "Phone: " + getPhone() + "\n" +
+                "Address: " + getAddress());
+    }
 }
