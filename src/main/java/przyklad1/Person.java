@@ -206,8 +206,8 @@ public class Person {
 
     }
 
-    public void printCustom(Function<Person, String> style){
-        System.out.println( style.apply(this) );
+    public String printCustom(Function<Person, String> style){
+        return style.apply(this);
     }
 
 
