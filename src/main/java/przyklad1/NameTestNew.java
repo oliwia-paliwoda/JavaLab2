@@ -9,7 +9,9 @@ public class NameTestNew {
         List<Person> list1 = Person.createShortList();
         System.out.println("===Custom List===");
         for(Person person:list1){
-                 person.printCustom(p -> "Name: " +p.getGivenName() + "eMail: " + p.geteMail());
+            System.out.println(
+                 person.printCustom(p -> "Name: " +p.getGivenName() + "eMail: " + p.geteMail())
+            );
         }
 
         Function<Person, String> westernStyle = p -> {
